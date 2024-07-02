@@ -26,6 +26,19 @@
   font-family: "Noto Serif JP";
 }
 
+/* animation */
+@keyframes star1 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes star2 {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
 /* variable */
 :root {
   --bg-color-white: #fff;
@@ -62,6 +75,7 @@ body {
 /* common */
 #main_page_all {
   width: 100%;
+  overflow: hidden;
 }
 
 /* navigation */
@@ -171,4 +185,116 @@ body {
   top: -238px;
   left: 180px;
   z-index: -1;
+}
+
+.star1 {
+  position: absolute;
+  top: 630px;
+  left: 1333px;
+  animation: star1 12s linear infinite;
+}
+
+.star2 {
+  position: absolute;
+  top: 740px;
+  left: 1440px;
+  animation: star2 12s linear infinite;
+}
+
+/* middle text area */
+#before_banner {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  font-size: 45px;
+  line-height: 120px;
+  color: var(--main-color-blue);
+}
+
+.section_banner {
+  background-color: var(--main-color-blue);
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* section area */
+.bn_main {
+  display: flex;
+}
+
+.bn_subtext {
+  color: var(--bg-color-white);
+  font-size: 24px;
+}
+
+.bn_maintext {
+  color: var(--bg-color-white);
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.bn_emoji {
+  margin-top: 5px;
+  transform: scale(80%);
+}
+
+/* personality area */
+.personality {
+  width: 100%;
+  height: 767px;
+  background-color: var(--bg-color-black);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#personality_main {
+  display: flex;
+  padding: 80px;
+  color: var(--bg-color-white);
+}
+
+#personality_main > span {
+  position: absolute;
+  top: 100px;
+  left: 875px;
+  font-size: 35px;
+  font-weight: 200;
+}
+
+.personality_maintext {
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  padding: 0 40px;
+  border-radius: 80px;
+  &:first-child {
+    background-color: var(--main-color-blue);
+  }
+  &:last-child {
+    margin-left: 50px;
+    background-color: var(--point-color-orange);
+  }
+}
+
+.personality_maintext > span {
+  font-size: 45px;
+}
+
+.personality_maintext > span .hanja {
+  font-size: 30px;
+}
+
+#personality_icon {
+  position: relative;
+}
+
+.personality_icon_emoji {
+  display: block;
+  position: absolute;
+  transform: scale(20%);
 }
