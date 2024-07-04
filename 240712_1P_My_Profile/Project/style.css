@@ -248,6 +248,7 @@ body {
   color: var(--main-color-blue);
 }
 
+/* section area */
 .section_banner {
   background-color: var(--main-color-blue);
   width: 100%;
@@ -258,7 +259,6 @@ body {
   align-items: center;
 }
 
-/* section area */
 .bn_main {
   display: flex;
 }
@@ -485,6 +485,47 @@ body {
       background: #fff;
       border-radius: 50%;
       cursor: pointer;
+    }
+  }
+}
+
+#history {
+  width: 100%;
+  height: 520px;
+  position: relative;
+  background: #fff;
+  .history_contents {
+    width: var(--main-width);
+    height: 400px;
+    margin: 120px auto 0;
+    display: flex;
+    justify-content: space-between;
+    .history_scroll {
+      width: 900px;
+      height: 100%;
+      display: flex;
+      overflow: scroll;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar{
+        display:none;
+      }
+      li {
+        font-size: 26px;
+        line-height: 200%;
+        margin-left: 50px;
+      }
+      li.bold {
+        font-size: 26px;
+        line-height: 200%;
+        margin-left: 0;
+        list-style-position: inside;
+        list-style-image: url("//ecimg.cafe24img.com/pg1108b23660447004/sheephi0609/1P_My_Profile/marker.png");
+      }
+    }
+    .history_photo {
+      width: 300px;
+      height: 400px;
+      background: url("//ecimg.cafe24img.com/pg1108b23660447004/sheephi0609/1P_My_Profile/My_photo.png") center/cover no-repeat;
     }
   }
 }
