@@ -91,3 +91,64 @@ fetch("./data.json")
       });
     });
   });
+
+// portfolio slide
+const pfImgs = [
+  "portfolio_1.png",
+  "portfolio_2.png",
+  "portfolio_3.png",
+  "portfolio_4.png",
+];
+const pfImg = document.querySelector(".portfolio_contents_work");
+pfImg.style.backgroundImage = `url(//ecimg.cafe24img.com/pg1108b23660447004/sheephi0609/1P_My_Profile/${pfImgs[0]})`;
+const pfslideContents = document.querySelector(".portfolio_contents_desc");
+const pfslideArrows = document.querySelectorAll(".portfolio_slide_btn");
+
+const pftopContents = document.querySelector(".portfolio_info");
+const pfconetentName1 = pftopContents.querySelector(
+  ".portfolio_info > ul > li:nth-child(1)"
+);
+const pfconetentName2 = pftopContents.querySelector(
+  ".portfolio_info > ul > li:nth-child(2)"
+);
+const pfconetentYears = pftopContents.querySelector(
+  ".portfolio_info > ul > li:nth-child(3)"
+);
+const pfconetentDesign = pftopContents.querySelector(
+  ".portfolio_info > ul > li:nth-child(4)"
+);
+const pfconetentCompany = pftopContents.querySelector(
+  ".portfolio_info > ul > li:nth-child(5)"
+);
+
+fetch("./data.json")
+  .then((response) => response.json())
+  .then((jsonData) => {
+    const [firstData, ...otherData] = jsonData.PFinfo;
+
+    pfconetentName1.innerText = firstData.name1;
+    pfconetentName2.innerText = firstData.name2;
+    pfconetentYears.innerText = firstData.years;
+    pfconetentDesign.innerText = firstData.design;
+    pfconetentCompany.innerText = firstData.company;
+
+    let i = 0;
+    pfslideArrows.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        i++;
+        if (i > pfImgs.length - 1) {
+          i = 0;
+          pfImg.style.backgroundImage = `url(//ecimg.cafe24img.com/pg1108b23660447004/sheephi0609/1P_My_Profile/${pfImgs[i]})`;
+        }
+        pfImg.style.backgroundImage = `url(//ecimg.cafe24img.com/pg1108b23660447004/sheephi0609/1P_My_Profile/${pfImgs[i]})`;
+
+        const { name1, name2, years, design, company } = jsonData.PFinfo[i];
+        pfconetentName1.innerText = name1;
+        pfconetentName2.innerText = name2;
+        pfconetentYears.innerText = years;
+        pfconetentDesign.innerText = design;
+        pfconetentCompany.innerText = company;
+      });
+    });
+  });

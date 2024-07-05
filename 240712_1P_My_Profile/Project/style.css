@@ -94,7 +94,7 @@ body {
 #navigation_header {
   width: 100%;
   height: 80px;
-  background: var(--bg-color-white);
+  background: #f3f6fb;
   position: fixed;
   transition: all 0.3s;
   z-index: 4;
@@ -108,7 +108,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  background: var(--bg-color-white);
+  background: #f3f6fb;
 }
 
 .nav_title {
@@ -506,8 +506,8 @@ body {
       display: flex;
       overflow: scroll;
       -ms-overflow-style: none;
-      &::-webkit-scrollbar{
-        display:none;
+      &::-webkit-scrollbar {
+        display: none;
       }
       li {
         font-size: 26px;
@@ -525,7 +525,116 @@ body {
     .history_photo {
       width: 300px;
       height: 400px;
-      background: url("//ecimg.cafe24img.com/pg1108b23660447004/sheephi0609/1P_My_Profile/My_photo.png") center/cover no-repeat;
+      background: url("//ecimg.cafe24img.com/pg1108b23660447004/sheephi0609/1P_My_Profile/My_photo.png")
+        center/cover no-repeat;
+    }
+  }
+}
+
+#portfolio {
+  width: 100%;
+  height: 1475px;
+  position: relative;
+  .portfolio_contents {
+    width: var(--main-width);
+    height: 550px;
+    margin: 120px auto 0;
+    display: flex;
+    .portfolio_contents_work {
+      width: 690px;
+      height: 550px;
+      border-radius: 50px 0 0 0;
+      transition: all 0.5s;
+    }
+    .portfolio_contents_text {
+      width: 490px;
+      margin-left: 10px;
+      .portfolio_contents_title {
+        width: 100%;
+        height: 154px;
+        border-radius: 50px 0 0 0;
+        background: var(--point-color-orange);
+        padding: 60px 50px 50px;
+        font-weight: 700;
+        font-size: 35px;
+        text-align: center;
+      }
+      .portfolio_contents_desc {
+        width: 100%;
+        height: 386px;
+        margin-top: 10px;
+        display: flex;
+        padding: 70px 70px;
+        font-size: 30px;
+        line-height: 150%;
+        background: #ddd;
+        .portfolio_title > ul > li:nth-child(2) {
+          visibility: hidden;
+        }
+        .portfolio_info {
+          margin-left: 20px;
+        }
+      }
+    }
+    .portfolio_slide_arrow {
+      width: 1265px;
+      position: absolute;
+      left: 330px;
+      top: 230px;
+      display: flex;
+      justify-content: space-between;
+      .portfolio_slide_btn > i {
+        display: inline-block;
+        width: 76px;
+        height: 76px;
+        font-size: 30px;
+        text-align: center;
+        color: #fff;
+        line-height: 76px;
+        background: var(--bg-color-black);
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+  .portfolio_skill_title {
+    width: var(--main-width);
+    text-align: center;
+    margin: 120px auto 0;
+    font-size: 40px;
+  }
+  .portfolio_skill {
+    width: var(--main-width);
+    height: 422px;
+    margin: 60px auto 120px;
+    display: flex;
+    gap: 10px;
+    .skill_box {
+      width: 290px;
+      height: 100%;
+      border-radius: 50px 0 0 0;
+      &.blue {
+        background: var(--main-color-blue);
+      }
+      &.orange {
+        background: var(--point-color-orange);
+      }
+      .skill_title {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 100px;
+        color: #fff;
+      }
+      .skill_contents {
+        display: inline-block;
+        position: relative;
+        left: 7px;
+        width: 276px;
+        height: 315px;
+        background: var(--bg-color-white);
+      }
     }
   }
 }
