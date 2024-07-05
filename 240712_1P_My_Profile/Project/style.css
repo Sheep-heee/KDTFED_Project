@@ -533,7 +533,7 @@ body {
 
 #portfolio {
   width: 100%;
-  height: 1475px;
+  height: 1350px;
   position: relative;
   .portfolio_contents {
     width: var(--main-width);
@@ -634,6 +634,137 @@ body {
         width: 276px;
         height: 315px;
         background: var(--bg-color-white);
+        ul {
+          display: flex;
+          flex-direction: column;
+          &.skill_contest5 {
+            padding-left: 20px;
+            padding-top: 8px;
+          }
+          &.skill_contest4 {
+            padding-left: 70px;
+            padding-top: 30px;
+          }
+          &.skill_contest3W {
+            padding-left: 65px;
+            padding-top: 60px;
+          }
+          &.skill_contest3O {
+            padding-left: 35px;
+            padding-top: 60px;
+          }
+        }
+        ul > li {
+          display: flex;
+          .skill_icon {
+            img {
+              margin-top: 10px;
+              margin-right: 10px;
+              width: 40px;
+              height: 40px;
+              object-fit: cover;
+            }
+          }
+          .skill_text {
+          font-size: 22px;
+          line-height: 60px;
+          }
+        }
+    }
+  }
+}
+}
+
+#hobby {
+  width: 100%;
+  height: 2500px;
+  background: var(--bg-color-black);
+  .hobby_title {
+    width: var(--main-width);
+    height: 200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    line-height: 200px;
+    text-align: center;
+    color: var(--bg-color-white);
+    .bold {
+      font-size: 50px;
+    }
+    span {
+      font-size: 26px;
+    }
+  }
+  .hobby_contents {
+    width: var(--main-width);
+    height: 582px;
+    margin: 0 auto;
+    position: relative;
+    .hobby_content_card_dw {
+      position: absolute;
+      top: 45px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    .hobby_content_dw {
+      position: absolute;
+      right: 0;
+      width: 980px;
+      height: 100%;
+    }
+    .hobby_content_card_gm {
+      position: absolute;
+      top: 45px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    .hobby_content_gm {
+      position: absolute;
+      right: 0;
+      width: 980px;
+      height: 100%;
+      .video_gm {
+        position: relative;
+        iframe {
+          position: absolute;
+          display: none;
+          &:nth-child(1).active {
+            display: inline;
+          }
+          &:nth-child(2).active {
+            display: inline;
+          }
+          &:nth-child(3).active {
+            display: inline;
+          }
+        }
+      }
+    }
+    .hobby_content_card_ms {
+      position: absolute;
+      top: 45px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    .hobby_content_ms {
+      position: absolute;
+      right: 0;
+      width: 980px;
+      height: 100%;
+      .video_ms {
+        position: relative;
+        iframe {
+          position: absolute;
+          display: none;
+          &:nth-child(1).active {
+            display: inline;
+          }
+          &:nth-child(2).active {
+            display: inline;
+          }
+          &:nth-child(3).active {
+            display: inline;
+          }
+        }
       }
     }
   }

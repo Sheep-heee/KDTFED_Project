@@ -152,3 +152,72 @@ fetch("./data.json")
       });
     });
   });
+
+  
+
+// hobby DW image change
+const dwitems = document.querySelectorAll(".hobby_content_card_dw li");
+const dwImgs = ["drawing_1.png", "drawing_2.png", "drawing_3.png"];
+const dwImg = document.querySelector(".hobby_content_dw");
+dwImg.style.backgroundImage = `url(//ecimg.cafe24img.com/pg1108b23660447004/sheephi0609/1P_My_Profile/${dwImgs[0]})`;
+
+dwitems.forEach((item, index) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    dwImg.style.backgroundImage = `url(//ecimg.cafe24img.com/pg1108b23660447004/sheephi0609/1P_My_Profile/${dwImgs[index]})`;
+  });
+});
+
+// hobby GM image change
+const gmBtn1 = document.querySelector(".hobby_content_card_gm>li:nth-child(1)");
+const gmBtn2 = document.querySelector(".hobby_content_card_gm>li:nth-child(2)");
+const gmBtn3 = document.querySelector(".hobby_content_card_gm>li:nth-child(3)");
+
+const gmVideo1 = document.querySelector(".video_gm>iframe:nth-child(1)");
+const gmVideo2 = document.querySelector(".video_gm>iframe:nth-child(2)");
+const gmVideo3 = document.querySelector(".video_gm>iframe:nth-child(3)");
+
+gmBtn1.addEventListener("click", function () {
+  gmVideo1.classList.add("active");
+  gmVideo2.classList.remove("active");
+  gmVideo3.classList.remove("active");
+});
+
+gmBtn2.addEventListener("click", function () {
+  gmVideo1.classList.remove("active");
+  gmVideo2.classList.add("active");
+  gmVideo3.classList.remove("active");
+});
+
+gmBtn3.addEventListener("click", function () {
+  gmVideo1.classList.remove("active");
+  gmVideo2.classList.remove("active");
+  gmVideo3.classList.add("active");
+});
+
+// hobby MS image change
+const msBtn1 = document.querySelector(".hobby_content_card_ms>li:nth-child(1)");
+const msBtn2 = document.querySelector(".hobby_content_card_ms>li:nth-child(2)");
+const msBtn3 = document.querySelector(".hobby_content_card_ms>li:nth-child(3)");
+
+const msVideo1 = document.querySelector(".video_ms>iframe:nth-child(1)");
+const msVideo2 = document.querySelector(".video_ms>iframe:nth-child(2)");
+const msVideo3 = document.querySelector(".video_ms>iframe:nth-child(3)");
+
+msBtn1.addEventListener("click", function () {
+  msVideo1.classList.add("active");
+  msVideo2.classList.remove("active");
+  msVideo3.classList.remove("active");
+});
+
+msBtn2.addEventListener("click", function () {
+  msVideo1.classList.remove("active");
+  msVideo2.classList.add("active");
+  msVideo3.classList.remove("active");
+});
+
+msBtn3.addEventListener("click", function () {
+  msVideo1.classList.remove("active");
+  msVideo2.classList.remove("active");
+  msVideo3.classList.add("active");
+});
