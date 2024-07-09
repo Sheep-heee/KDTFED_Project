@@ -14,7 +14,7 @@ maleBtn.addEventListener("click", (event) => {
   femaleBtn.classList.remove("filledA");
 });
 
-// modal
+// signin modal
 const btn = document.querySelector(".signin_btn");
 const overlay = document.querySelector("#overlay");
 const modalBox = document.querySelector("#signin");
@@ -26,5 +26,19 @@ btn.addEventListener("click", () => {
 
 overlay.addEventListener("click", () => {
   modalBox.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
+// login modal
+const loginBtn = document.querySelector(".login_btn");
+const modalBoxLogin = document.querySelector("#login");
+
+loginBtn.addEventListener("click", () => {
+  modalBoxLogin.classList.add("active");
+  overlay.classList.add("active");
+});
+
+overlay.addEventListener("click", () => {
+  modalBoxLogin.classList.remove("active");
   overlay.classList.remove("active");
 });
