@@ -153,8 +153,6 @@ fetch("./data.json")
     });
   });
 
-  
-
 // hobby DW image change
 const dwitems = document.querySelectorAll(".hobby_content_card_dw li");
 const dwImgs = ["drawing_1.png", "drawing_2.png", "drawing_3.png"];
@@ -220,4 +218,43 @@ msBtn3.addEventListener("click", function () {
   msVideo1.classList.remove("active");
   msVideo2.classList.remove("active");
   msVideo3.classList.add("active");
+});
+
+// hobby pager color change
+
+dwitems.forEach((item) => {
+  item.addEventListener("click", function () {
+    dwitems.forEach((sibling) => {
+      if (sibling !== this) {
+        sibling.style.backgroundColor = `#dddddd`;
+      }
+      this.style.backgroundColor = `#5389db`;
+    });
+  });
+});
+
+const gmBtns = document.querySelectorAll(".hobby_content_card_gm li");
+
+gmBtns.forEach((item) => {
+  item.addEventListener("click", function () {
+    gmBtns.forEach((sibling) => {
+      if (sibling !== this) {
+        sibling.style.backgroundColor = `#dddddd`;
+      }
+      this.style.backgroundColor = `#5389db`;
+    });
+  });
+});
+
+const msBtns = document.querySelectorAll(".hobby_content_card_ms li");
+
+msBtns.forEach((item) => {
+  item.addEventListener("click", function () {
+    msBtns.forEach((sibling) => {
+      if (sibling !== this) {
+        sibling.style.backgroundColor = `#dddddd`;
+      }
+      this.style.backgroundColor = `#5389db`;
+    });
+  });
 });

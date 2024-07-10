@@ -538,6 +538,9 @@ body {
     }
   }
 }
+#history_mobile {
+  display: none;
+}
 
 /* portfolio area */
 #portfolio {
@@ -714,6 +717,13 @@ body {
       top: 45px;
       cursor: pointer;
       z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      li {
+        width: 244px;
+        height: 160px;
+      }
     }
     .hobby_content_dw {
       position: absolute;
@@ -726,6 +736,13 @@ body {
       top: 45px;
       cursor: pointer;
       z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      li {
+        width: 244px;
+        height: 160px;
+      }
     }
     .hobby_content_gm {
       position: absolute;
@@ -735,16 +752,18 @@ body {
       .video_gm {
         position: relative;
         iframe {
+          width: 980px;
+          height: 582px;
           position: absolute;
           display: none;
           &:nth-child(1).active {
-            display: inline;
+            display: block;
           }
           &:nth-child(2).active {
-            display: inline;
+            display: block;
           }
           &:nth-child(3).active {
-            display: inline;
+            display: block;
           }
         }
       }
@@ -754,6 +773,13 @@ body {
       top: 45px;
       cursor: pointer;
       z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      li {
+        width: 244px;
+        height: 160px;
+      }
     }
     .hobby_content_ms {
       position: absolute;
@@ -763,6 +789,8 @@ body {
       .video_ms {
         position: relative;
         iframe {
+          width: 980px;
+          height: 582px;
           position: absolute;
           display: none;
           &:nth-child(1).active {
@@ -915,7 +943,7 @@ footer {
         margin-left: 0;
       }
     }
-    &:nth-of-type(2) {
+    & > span:nth-of-type(1) {
       display: none;
     }
   }
@@ -957,8 +985,7 @@ footer {
     &.left {
       left: -100%;
       text-align: right;
-      background-color: #c4e7f6;
-      border-radius: 0 40px 0 0;
+      word-break: keep-all;
       .personality_desc_emoji {
         position: absolute;
         top: 30%;
@@ -969,7 +996,6 @@ footer {
     &.right {
       left: 100%;
       background-color: #ffe9c9;
-      border-radius: 40px 0 0 0;
       .personality_desc_emoji {
         position: absolute;
         top: 30%;
@@ -985,5 +1011,288 @@ footer {
 
   .personality_desc.right.active {
     left: 0;
+  }
+  .personality_slide {
+    .personality_slide_img {
+      height: 300px;
+      background-position: -500px;
+    }
+    .personality_slide_text {
+      width: 100%;
+      height: 400px;
+      padding: 30px;
+      position: static;
+      border-radius: 0;
+      h1 {
+        font-size: 30px;
+        margin: 30px 0;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+    .personality_slide_arrow {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 43%;
+    }
+  }
+  #history {
+    display: none;
+  }
+  #history_mobile {
+    display: block;
+    .history_contents_mb {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .history_photo_mb {
+        margin-top: 50px;
+        width: 80%;
+        height: 400px;
+        border-radius: 30px 0 0 0;
+        background: url("//ecimg.cafe24img.com/pg1108b23660447004/sheephi0609/1P_My_Profile/My_photo.png")
+          center/cover no-repeat;
+      }
+      .history_scroll_mb {
+        display: flex;
+        gap: 10px;
+        overflow: scroll;
+        margin: 40px 0;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        li {
+          line-height: 150%;
+        }
+        li.bold {
+          list-style: disc;
+          list-style-position: inside;
+        }
+      }
+    }
+  }
+  #main_page_all section:nth-of-type(9) {
+    height: 300px;
+    .bn_subtext {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .bn_maintext {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .bn_emoji {
+      display: none;
+    }
+  }
+  #portfolio {
+    height: 300%;
+    .portfolio_contents {
+      width: 100%;
+      height: 100%;
+      margin: 50px auto 0;
+      flex-direction: column;
+      .portfolio_contents_work {
+        width: 100%;
+        height: 40vh;
+        border-radius: 30px 0 0 0;
+        background-position: center;
+        background-size: cover;
+      }
+      .portfolio_contents_text {
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0px;
+        .portfolio_contents_title {
+          width: 100%;
+          height: 154px;
+          border-radius: 0 0 0 0;
+          padding: 40px 50px 50px;
+          word-break: keep-all;
+        }
+        .portfolio_contents_desc {
+          width: 100%;
+          height: 260px;
+          padding: 30px 50px;
+          font-size: 24px;
+        }
+      }
+      .portfolio_slide_arrow {
+        width: 100%;
+        left: 0px;
+        top: 10%;
+      }
+    }
+    .portfolio_skill_title {
+      width: 100%;
+      margin: 60px auto 0;
+    }
+    .portfolio_skill {
+      width: 100%;
+      height: 300%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .skill_box {
+        .skill_contents {
+          left: 7px;
+          bottom: 7px;
+          width: 276px;
+          height: 320px;
+        }
+      }
+    }
+  }
+  #hobby {
+    height: 1500px;
+    .hobby_title {
+      width: 100%;
+      padding-top: 0px;
+      line-height: 200px;
+      .bold {
+        font-size: 40px;
+      }
+      span {
+        font-size: 22px;
+      }
+    }
+    .hobby_contents {
+      width: 100%;
+      height: 236px;
+      margin: 0 auto;
+      position: relative;
+      .hobby_content_card_dw {
+        display: flex;
+        gap: 10px;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%);
+        flex-direction: row;
+        li {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          &:nth-child(1) {
+            background: var(--main-color-blue);
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            background: #ddd;
+          }
+          img {
+            display: none;
+          }
+        }
+      }
+      .hobby_content_dw {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+      }
+      .hobby_content_card_gm {
+        display: flex;
+        gap: 10px;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%);
+        flex-direction: row;
+        li {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          &:nth-child(1) {
+            background: var(--main-color-blue);
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            background: #ddd;
+          }
+          img {
+            display: none;
+          }
+        }
+      }
+      .hobby_content_gm {
+        width: 100%;
+        height: 236px;
+        .video_gm {
+          iframe {
+            width: 100%;
+            height: 236px;
+          }
+        }
+      }
+      .hobby_content_card_ms {
+        display: flex;
+        gap: 10px;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%);
+        flex-direction: row;
+        li {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          &:nth-child(1) {
+            background: var(--main-color-blue);
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            background: #ddd;
+          }
+          img {
+            display: none;
+          }
+        }
+      }
+      .hobby_content_ms {
+        width: 100%;
+        height: 236px;
+        .video_ms {
+          iframe {
+            width: 100%;
+            height: 236px;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    width: 100%;
+    height: 160px;
+    #footer_background {
+      width: 80%;
+      .footer_text_area {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+        .footer_logo {
+          font-size: 40px;
+          letter-spacing: 2px;
+        }
+        p {
+          font-weight: 300;
+          letter-spacing: 0px;
+        }
+      }
+      .footer_topbtn {
+        top: 30px;
+        a {
+          height: 100px;
+          line-height: 100px;
+          border-radius: 20%;
+        }
+      }
+    }
   }
 }
