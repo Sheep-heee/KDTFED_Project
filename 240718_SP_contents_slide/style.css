@@ -1,5 +1,8 @@
-/* reset */
+/* font import */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Oswald:wght@200..700&display=swap");
 
+/* reset */
 * {
   margin: 0;
   padding: 0;
@@ -20,4 +23,81 @@ a {
 #container {
   width: 100%;
   height: 100%;
+}
+
+#header_area {
+  width: 100%;
+  height: 164px;
+  background: #2f2f2f;
+  border-bottom: 10px solid #e73232;
+  /* position: fixed; */
+  z-index: 1;
+  #header_contents {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    .logo {
+      font: bold 50px/1 "Oswald", sans-serif;
+      text-align: center;
+      padding: 43px 0 11px;
+    }
+    .gnb > ul {
+      display: flex;
+      justify-content: center;
+      gap: 58px;
+      font: 300 20px/1 "Inter", sans-serif;
+    }
+  }
+}
+
+#tabs {
+  /* overflow: hidden; */
+  height: 100%;
+  position: relative;
+  #contents {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    color: #fff;
+    transition: all 0.5s;
+    .image_content01 {
+      width: 20%;
+      height: 100%;
+      background: url("./img/background_1.png") center/cover no-repeat;
+    }
+    .image_content02 {
+      width: 20%;
+      height: 100%;
+      background: url("./img/background_2.png") center/cover no-repeat;
+    }
+    .image_content03 {
+      width: 20%;
+      height: 100%;
+      background: url("./img/background_3.png") center/cover no-repeat;
+    }
+    .image_content04 {
+      width: 20%;
+      height: 100%;
+      background: url("./img/background_4.png") center/cover no-repeat;
+    }
+    .image_content05 {
+      width: 20%;
+      height: 100%;
+      background: url("./img/background_5.png") center/cover no-repeat;
+    }
+    .text_content {
+      span {
+        display: block;
+        width: 78px;
+        height: 10px;
+        background: #e73232;
+      }
+      h1 {
+        font: bold 200px/1 "Oswald", sans-serif;
+      }
+      h2 {
+        font: bold 100px/1 "Oswald", sans-serif;
+      }
+    }
+  }
 }
