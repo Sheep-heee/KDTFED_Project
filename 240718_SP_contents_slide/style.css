@@ -46,12 +46,27 @@ a {
       justify-content: center;
       gap: 58px;
       font: 300 20px/1 "Inter", sans-serif;
+      .news01.active {
+        color: #e73232;
+      }
+      .news02.active {
+        color: #e73232;
+      }
+      .news03.active {
+        color: #e73232;
+      }
+      .news04.active {
+        color: #e73232;
+      }
+      .news05.active {
+        color: #e73232;
+      }
     }
   }
 }
 
 #tabs {
-  /* overflow: hidden; */
+  overflow: hidden;
   height: 100%;
   position: relative;
   height: 100vh;
@@ -66,17 +81,15 @@ a {
     & > div {
       width: 20%;
       height: 100vh;
+      &::before {
+        content: "";
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, transparent, #000);
+      }
       &:nth-child(1) {
         background: url("./img/background_1.png") center/cover no-repeat;
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(to right, transparent, #000);
-        }
       }
       &:nth-child(2) {
         background: url("./img/background_2.png") center/cover no-repeat;
@@ -91,11 +104,14 @@ a {
         background: url("./img/background_5.png") center/cover no-repeat;
       }
       .text_content {
-        position: relative;
+        position: absolute;
         top: 300px;
         text-align: right;
-        padding-right: 318px;
-        z-index: 1;
+        padding-left: 1000px;
+        opacity: 0;
+        transform: translateY(-200px);
+        transition: 0.5s;
+        transition-delay: 0.5s;
         span {
           display: inline-block;
           width: 78px;
