@@ -3,6 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <!-- slick slider -->
+    <link rel="stylesheet" href="./slick/slick.css" />
+    <link rel="stylesheet" href="./slick/slick-theme.css" />
+    <script defer src="./slick/slick.min.js"></script>
     <!-- fontawesome -->
     <script
       src="https://kit.fontawesome.com/4dc0b0ef48.js"
@@ -73,6 +86,39 @@
           </div>
         </div>
       </header>
+      <main class="mainbanner_area">
+        <div class="mainbanner_back">
+          <img class="active" src="./img/banner1.png" alt="banner1" />
+          <img src="./img/banner2.png" alt="banner2" />
+          <img src="./img/banner3.png" alt="banner3" />
+          <img src="./img/banner4.jfif" alt="banner4" />
+          <img src="./img/banner5.png" alt="banner5" />
+        </div>
+        <div class="mainbanner">
+          <div class="mainslide_img"></div>
+          <div class="mainslide_arrow">
+            <div class="mainslide_btn left">
+              <i id="leftArrow" class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="mainslide_btn right">
+              <i id="rightArrow" class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+          <div class="mainslide_pager">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </main>
+      <section id="main_contents">
+        <div class="contents">
+          <div class="item"></div>
+        </div>
+        <div class="guide_more"></div>
+      </section>
     </div>
   </body>
 </html>

@@ -46,6 +46,7 @@ header {
     color: $main-white-color;
     span {
       color: $main-red-color;
+      cursor: pointer;
     }
   }
   .navigation_heading {
@@ -97,11 +98,137 @@ header {
           display: flex;
           gap: 50px;
           position: absolute;
-          top: -3px;
+          top: -4px;
           left: 30px;
           .name {
             font-weight: 700;
+            li {
+              position: absolute;
+              top: -36px;
+              left: 0;
+              &.prev {
+                top: -36px;
+                transition: top 0.5s;
+              }
+              &.current {
+                top: 0;
+                transition: top 0.5s;
+              }
+              &.next {
+                top: 36px;
+              }
+            }
           }
+          .comment {
+            width: 300px;
+            position: relative;
+            left: 50px;
+            li {
+              position: absolute;
+              top: -36px;
+              left: 0;
+              &.prev {
+                top: -36px;
+                transition: top 0.5s;
+              }
+              &.current {
+                top: 0;
+                transition: top 0.5s;
+              }
+              &.next {
+                top: 36px;
+              }
+            }
+          }
+        }
+      }
+      .lnb ul {
+        display: flex;
+        gap: 20px;
+        li {
+          cursor: pointer;
+          &.redbold {
+            color: $main-red-color;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+// main
+.mainbanner_area {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+  position: relative;
+  .mainbanner_back {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 150%;
+      height: 150%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      filter: blur(10px);
+      -webkit-filter: blur(10px);
+      opacity: 0;
+      transition: all 0.3s;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+  .mainbanner {
+    width: $main-width;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    .mainslide_img {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      transition: all 0.3s;
+    }
+    .mainslide_arrow {
+      width: $main-width;
+      position: absolute;
+      top: 30%;
+      display: flex;
+      justify-content: space-between;
+      padding: 50px;
+      font-size: 40px;
+      color: #fff;
+      div {
+        cursor: pointer;
+      }
+    }
+    .mainslide_pager {
+      display: flex;
+      gap: 10px;
+      position: absolute;
+      top: 92%;
+      left: 50%;
+      transform: translateX(-50%);
+      span {
+        width: 15px;
+        height: 15px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.3);
+        cursor: pointer;
+        opacity: 0.5;
+        &.active {
+          opacity: 1;
         }
       }
     }
