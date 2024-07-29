@@ -98,3 +98,13 @@ slidePagers.forEach((pager, index) => {
     updateBack(i);
   });
 });
+
+$(".contest_slide").slick({
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  speed: 1000,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 5,
+});

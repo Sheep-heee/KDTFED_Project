@@ -352,3 +352,63 @@ header {
     }
   }
 }
+
+#contest_area {
+  width: 100%;
+  height: auto;
+  &.grey {
+    background: $main-gray-color;
+  }
+  &.white {
+    background: $main-white-color;
+  }
+  .contest_inner {
+    width: $main-width;
+    margin: 0 auto;
+    h2 {
+      font-size: 35px;
+      text-align: center;
+      padding: 70px 0 40px;
+      span {
+        color: $main-red-color;
+      }
+    }
+    .contest_slide {
+      .contest_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .contest_item_img {
+          width: 240px;
+          background: #ddd;
+          border-radius: 10px;
+          &.h240 {
+            height: 240px;
+          }
+          &.h110 {
+            height: 110px;
+          }
+        }
+        .contest_item_title {
+          display: flex;
+          flex-direction: column;
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: -1px;
+          margin-top: 5px;
+        }
+        .contest_item_desc {
+          margin-top: 10px;
+          .desc1 {
+            font-size: 14px;
+          }
+          .desc2 {
+            font-size: 12px;
+            color: $main-red-color;
+            margin-bottom: 75px;
+          }
+        }
+      }
+    }
+  }
+}
