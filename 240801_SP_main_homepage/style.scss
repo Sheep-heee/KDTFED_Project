@@ -412,3 +412,50 @@ header {
     }
   }
 }
+
+#labbanner_area {
+  width: 100%;
+  height: 300px;
+  background: url("./img/lab.png");
+  color: $main-white-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &::before {
+    content: "";
+    background: linear-gradient(
+      to right,
+      rgba(237, 27, 27, 0.3),
+      rgba(0, 0, 0, 0.7)
+    );
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  h2 {
+    font-size: 35px;
+    z-index: 1;
+  }
+  p {
+    font-size: 25px;
+    font-weight: 300;
+    z-index: 1;
+  }
+  a {
+    padding: 10px 30px;
+    margin-top: 20px;
+    background: $main-red-color;
+    border-radius: 50px;
+    font-size: 25px;
+    z-index: 1;
+    transition: all 0.3s;
+    &:hover {
+      background: $main-white-color;
+      color: $main-red-color;
+    }
+  }
+}
