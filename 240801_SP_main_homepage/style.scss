@@ -459,3 +459,49 @@ header {
     }
   }
 }
+
+#news_contents_area {
+  width: 100%;
+  height: auto;
+  .news_inner {
+    width: $main-width;
+    height: 100%;
+    margin: 0 auto;
+    & > h2 {
+      font-size: 35px;
+      margin-top: 85px;
+      text-align: center;
+      span {
+        color: $main-red-color;
+      }
+    }
+    .news_contents {
+      display: flex;
+      gap: 40px;
+      .news_title {
+        color: $main-red-color;
+        font-weight: 700;
+        font-size: 18px;
+        margin: 60px 0 20px;
+      }
+      .news_left {
+        .youtube_content {
+          display: flex;
+          gap: 30px;
+          .youtube_content_img {
+            width: 300px;
+            height: 175px;
+            background: #ddd;
+          }
+          .youtube_content_text {
+            width: 500px;
+          }
+          .divider {
+            display: inline-block;
+            width: 500px;
+          }
+        }
+      }
+    }
+  }
+}
